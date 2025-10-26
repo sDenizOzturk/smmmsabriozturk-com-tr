@@ -9,7 +9,6 @@ nav {
   background-color: $dark;
 }
 
-
 .light {
   background-color: $white;
 }
@@ -25,6 +24,13 @@ li {
   &:hover {
     transform: translateY(-3px);
     transition: $transition;
+  }
+}
+
+.link {
+  font-weight: 700;
+  @media only screen and (min-width: 940px) {
+    font-weight: 500;
   }
 }
 

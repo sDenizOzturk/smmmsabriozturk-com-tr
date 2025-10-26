@@ -1,5 +1,12 @@
 @import "../../variables.modules";
 
+.page {
+  padding-top: 2rem;
+  @media only screen and (min-width: 940px) {
+    padding-top: 0;
+  }
+}
+
 h1 {
   font-size: 2rem;
   text-align: center;
@@ -17,7 +24,6 @@ h2 {
     text-align: left;
   }
 }
-
 
 .hand {
   animation-name: wave;
@@ -37,13 +43,48 @@ a:hover {
   transition: color 200ms ease;
 }
 
+.summary {
+  text-align: justify;
+  padding: 0.8rem;
+  padding-bottom: 0rem;
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  font-style: italic;
+
+  @media (min-width: 940px) {
+    max-width: 395px;
+    padding: 0.8rem;
+    padding-bottom: 0rem;
+    font-size: 0.95rem;
+    font-style: normal;
+  }
+}
+
 @keyframes wave {
-  0% { transform: rotate( 0.0deg) }
-  10% { transform: rotate(14.0deg) }
-  20% { transform: rotate(-8.0deg) }
-  30% { transform: rotate(14.0deg) }
-  40% { transform: rotate(-4.0deg) }
-  50% { transform: rotate(10.0deg) }
-  60% { transform: rotate( 0.0deg) }
-  100% { transform: rotate( 0.0deg) }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
